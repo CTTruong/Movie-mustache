@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<ul>
+  {{#movies}}
+<li>
+<form action="/delete-movie" method="post">
+<input type="hidden" name="movieTitle" value="{{title}}"/>
+<h3>{{title}}</h3>
+<img src='{{movieImgURL}}'/>
+<p>{{genre}}</p>
+<p>{{description}}</p>
+<input type="submit" value="Remove"/>
+
+</form>
+<li>
+</ul>
+{{/movies}}
+
+
+  </body>
+</html>
